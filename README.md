@@ -8,7 +8,7 @@ works for simple testing, there may be errors thrown too as I'm now working on t
 So the GUI test class is in a build phase and as such runs, but errors are
 likely to be thrown, so don't be too concerned, I'll get to them.
 
-Oh yeah, the GUI is being built with **Swing**, if you hav a better suggestion
+The GUI is being built with **Swing**, if you have a better suggestion
 I'd love to hear it.
 
 In the end the GUI test class will be a case use example of the library.

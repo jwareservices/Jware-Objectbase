@@ -1,0 +1,74 @@
+/*
+
+CompletionHandler
+Future
+
+Object obj =  something
+
+FileOutputStream fos = // an initialized stream
+
+ByteArrayOutputStream bos = new ByteArrayOutputStream();
+ObjectOutputStream oos = new ObjectOutputStream(bos);
+oos.writeObject(obj);
+oos.flush();
+
+if (bos.size() > MAX_ALLOWED_SIZE)
+   throw xxxx
+else
+{
+    fos.getChannel().position(writeLocation);
+    bos.writeTo(fos);
+}
+
+To read the objects, do the following:
+
+FileInputStream fis = // an initialized stream
+
+fis.getChannel().position(offsetOfSerializedObject);
+ObjectInputStream iis = new ObjectInputStream(new BufferedInputStream(fis));
+Object obj = iis.readObject();
+
+Path path = Paths.get("data/test-write.txt");
+if(!Files.exists(path)){
+    Files.createFile(path);
+}
+AsynchronousFileChannel fileChannel = 
+    AsynchronousFileChannel.open(path, StandardOpenOption.WRITE);
+
+ByteBuffer buffer = ByteBuffer.allocate(1024);
+long position = 0;
+
+buffer.put("test data".getBytes());
+buffer.flip();
+
+fileChannel.write(buffer, position, buffer, new CompletionHandler<Integer, ByteBuffer>() {
+
+    @Override
+    public void completed(Integer result, ByteBuffer attachment) {
+        System.out.println("bytes written: " + result);
+    }
+
+    @Override
+    public void failed(Throwable exc, ByteBuffer attachment) {
+        System.out.println("Write failed");
+        exc.printStackTrace();
+    }
+});
+Path path = Paths.get("data/test-write.txt");
+AsynchronousFileChannel fileChannel = 
+    AsynchronousFileChannel.open(path, StandardOpenOption.WRITE);
+
+ByteBuffer buffer = ByteBuffer.allocate(1024);
+long position = 0;
+
+buffer.put("test data".getBytes());
+buffer.flip();
+
+Future<Integer> operation = fileChannel.write(buffer, position);
+buffer.clear();
+
+while(!operation.isDone());
+
+System.out.println("Write done");
+
+*/
