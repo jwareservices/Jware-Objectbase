@@ -1,7 +1,7 @@
 # Jware-Objectbase
 _A Java based object persistence library_
 
-THIS ARCHIVE/REPO HASN'T BEEN TOUCHED IN YEARS, BUT I'D LIKE TO GET BACK TO IT AGAIN.  THE IDEA IS SINPLY TOO BUILD IT FOR FUN.  IT'S A GREAT CONCEPT AND ONE THAT I MAY PORT TO C++.
+THIS ARCHIVE/REPO HASN'T BEEN TOUCHED IN YEARS, BUT I'D LIKE TO GET BACK TO IT AGAIN.  THE IDEA IS SIMPLY TOO BUILD IT FOR FUN.  IT'S A GREAT CONCEPT AND ONE THAT I MAY PORT TO C++.
 
 The test classes **ObjectBase** and **ObjectBaseTestGui** run in console and graphical mode respectively.
 They should be fairly self explanatory to use.  The console version is no longer in build, but it 
