@@ -25,6 +25,6 @@ even though there may be Instability.
 
 Also documentation is coming, I try to doc as I go...but that does not always go as planned.
 
-If you have any suggestions or comments please email me at: paul@jwareservices.com
+If you have any suggestions or comments please email me at: jwareservices@gmailcom
 
 I'd love to hear from anyone about this project.
