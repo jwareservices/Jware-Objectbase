@@ -10,13 +10,13 @@ The test classes **ObjectBase** and **ObjectBaseTestGui** run in console and gra
 They should be fairly self explanatory to use.  The console version is no longer in build, but it 
 works for simple testing, there may be errors thrown too as I'm now working on the GUI based test.
 
-So the GUI test class is in a build phase and as such runs, but errors are
+So the UI test class is in a build phase and as such runs, but errors are
 likely to be thrown, so don't be too concerned, I'll get to them.
 
-The GUI is being built with **Swing**, if you have a better suggestion
+The UI is being built with **Swing**, if you have a better suggestion
 I'd love to hear it.
 
-In the end the GUI test class will be a case use example of the library.
+In the end the UI test class will be a case use example of the library.
 
 The whole library is in the build phase, there's a lot left to do.
 
